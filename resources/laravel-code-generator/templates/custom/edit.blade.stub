@@ -1,0 +1,37 @@
+@extends('[% layout_name %]')
+
+@section('content-header')
+    <h1>
+        [% model_name_title %]
+        <small>Modification </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="{{route('dashboard')}}"><i class="fa fa-truck"></i> Dashboard</a></li>
+        <li class=""><a href="{{route('[% index_route_name %]')}}">[% model_plural %]</a></li>
+        <li class=""><a href="{{route('[% show_route_name %]', $[% model_name_singular_variable %]->[% primary_key %])}}">[% model_name_title %]</a></li>
+        <li class="active"><a href="{{route('[% edit_route_name %]', $[% model_name_singular_variable %]->[% primary_key %])}}">Modification</a></li>
+    </ol>
+@endsection
+
+@section('content')
+
+    @component('components.box-form-edit')
+        @slot('headerLeft') {{ !empty([% model_header %]) ? [% model_header %] : '[% model_name_title %]' }} @endslot
+
+        @slot('actions')
+            <a href="{{ route('[% index_route_name %]') }}" class="btn btn-primary" title="[% show_all_models %]">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+            </a>
+
+            <a href="{{ route('[% create_route_name %]') }}" class="btn btn-success" title="[% create_model %]">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </a>
+        @endslot
+
+        @slot('route') {{ route('[% update_route_name %]', $[% model_name_singular_variable %]->[% primary_key %]) }} @endslot
+
+        @include ('[% form_view_name %]', ['[% model_name_singular_variable %]' => $[% model_name_singular_variable %],])
+
+    @endcomponent
+
+@endsection
