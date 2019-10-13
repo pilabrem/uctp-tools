@@ -1,6 +1,14 @@
 @inject('request', 'Illuminate\Http\Request')
 
 @can('manage users')
+
+<li class="{{ $request->segment(1) == 'settings' ? 'active' : '' }}">
+    <a href="{{ route('settings.setting.index') }}">
+        <i class="fa fa-gears"></i>
+        <span class="title">@lang('global.settings')</span>
+    </a>
+</li>
+
 <li class="treeview {{(Route::is('admin.users.*') || Route::is('admin.roles.*') || Route::is('admin.permissions.*')) ? 'active' : null}}">
     <a href="#">
         <i class="fa fa-users"></i>

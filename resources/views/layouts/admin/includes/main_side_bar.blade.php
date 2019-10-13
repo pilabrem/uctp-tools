@@ -3,9 +3,6 @@
     <section class="sidebar">
         <!-- search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <div class="content-justify-center" style="text-align: center; padding-top: 5px;">
-            <img src='' class="img img-fluid" alt="" style="width: 95%; border-radius: 5px;">
-        </div>
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">NAVIGATION</li>
 

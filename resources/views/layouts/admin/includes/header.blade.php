@@ -2,14 +2,18 @@
 <!-- Logo -->
 <a href="{{route('dashboard')}}" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>{{config('custom.app_name_short')}}</b></span>
+    <span class="logo-mini">
+        <img src="{{asset('logo.png')}}" alt="logo de l'entreprise" height="40" width="40" class="img-circle"
+             style="margin-right: 3px; margin-bottom: 3px;">
+    </span>
     <!-- logo for regular state and mobile devices -->
     <span class="logo-lg" style="text-align:left">
-            <img src="{{asset('logo.png')}}" alt="logo de alink" height="40" width="40" class="img-circle"
-            style="margin-right: 25px; margin-bottom: 3px;">
+            <img src="{{asset('logo.png')}}" alt="logo de l'entreprise" height="40" width="40" class="img-circle"
+            style="margin-right: 5px; margin-bottom: 3px;">
         {{config('custom.app_name')}}
     </span>
 </a>
+
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top">
     <!-- Sidebar toggle button-->

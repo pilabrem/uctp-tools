@@ -51,6 +51,8 @@ return [
         'edit datas' => 'Edit datas',
         'delete datas' => 'Delete datas',
     ],
+	'settings' => 'Paramètres',
+	'setting' => 'Paramètre',
 	'app_create' => 'Create',
 	'app_save' => 'Save',
 	'app_edit' => 'Edit',

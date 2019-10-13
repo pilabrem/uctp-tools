@@ -32,3 +32,22 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::group([
+    'prefix' => 'settings',
+], function () {
+    Route::get('/', 'SettingsController@index')
+         ->name('settings.setting.index');
+    Route::get('/create','SettingsController@create')
+         ->name('settings.setting.create');
+    Route::get('/show/{setting}','SettingsController@show')
+         ->name('settings.setting.show')->where('id', '[0-9]+');
+    Route::get('/{setting}/edit','SettingsController@edit')
+         ->name('settings.setting.edit')->where('id', '[0-9]+');
+    Route::post('/', 'SettingsController@store')
+         ->name('settings.setting.store');
+    Route::put('setting/{setting}', 'SettingsController@update')
+         ->name('settings.setting.update')->where('id', '[0-9]+');
+    Route::delete('/setting/{setting}','SettingsController@destroy')
+         ->name('settings.setting.destroy')->where('id', '[0-9]+');
+});
