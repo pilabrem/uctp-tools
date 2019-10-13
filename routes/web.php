@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
 });
 
 Route::group([
-    'prefix' => 'settings',
+    'prefix' => 'admin/settings',
 ], function () {
     Route::get('/', 'SettingsController@index')
          ->name('settings.setting.index');

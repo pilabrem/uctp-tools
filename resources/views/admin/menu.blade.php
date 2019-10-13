@@ -52,3 +52,15 @@
         <span class="title">@lang('global.change_password.title')</span>
     </a>
 </li>
+
+
+@can('manage users')
+
+<li class="{{ $request->segment(1) == 'generator_tables' ? 'active' : '' }}">
+    <a href="{{ route('generator_tables.generator_table.index') }}" target="_blank">
+        <i class="fa fa-code"></i>
+        <span class="title">Code generator</span>
+    </a>
+</li>
+
+@endcan
