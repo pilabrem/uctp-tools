@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ORYX</title>
+<title>{{config('custom.app_name')}}</title>
 <link rel="shortcut icon" href="{{asset('logo.png')}}" type="image/png">
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
