@@ -9,7 +9,8 @@
     </a>
 </li>
 
-<li class="treeview {{(Route::is('admin.users.*') || Route::is('admin.roles.*') || Route::is('admin.permissions.*')) ? 'active' : null}}">
+<li
+    class="treeview {{(Route::is('admin.users.*') || Route::is('admin.roles.*') || Route::is('admin.permissions.*')) ? 'active' : null}}">
     <a href="#">
         <i class="fa fa-users"></i>
         <span class="title">@lang('global.user-management.title')</span>
@@ -56,11 +57,13 @@
 
 @can('manage users')
 
+@if (Route::has('generator_tables.generator_table.index'))
 <li class="{{ $request->segment(1) == 'generator_tables' ? 'active' : '' }}">
     <a href="{{ route('generator_tables.generator_table.index') }}" target="_blank">
         <i class="fa fa-code"></i>
         <span class="title">Code generator</span>
     </a>
 </li>
+@endif
 
 @endcan
