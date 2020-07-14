@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,17 +39,30 @@ Route::group([
     'prefix' => 'admin/settings',
 ], function () {
     Route::get('/', 'SettingsController@index')
-         ->name('settings.setting.index');
-    Route::get('/create','SettingsController@create')
-         ->name('settings.setting.create');
-    Route::get('/show/{setting}','SettingsController@show')
-         ->name('settings.setting.show')->where('id', '[0-9]+');
-    Route::get('/{setting}/edit','SettingsController@edit')
-         ->name('settings.setting.edit')->where('id', '[0-9]+');
+        ->name('settings.setting.index');
+    Route::get('/create', 'SettingsController@create')
+        ->name('settings.setting.create');
+    Route::get('/show/{setting}', 'SettingsController@show')
+        ->name('settings.setting.show')->where('id', '[0-9]+');
+    Route::get('/{setting}/edit', 'SettingsController@edit')
+        ->name('settings.setting.edit')->where('id', '[0-9]+');
     Route::post('/', 'SettingsController@store')
-         ->name('settings.setting.store');
+        ->name('settings.setting.store');
     Route::put('setting/{setting}', 'SettingsController@update')
-         ->name('settings.setting.update')->where('id', '[0-9]+');
-    Route::delete('/setting/{setting}','SettingsController@destroy')
-         ->name('settings.setting.destroy')->where('id', '[0-9]+');
+        ->name('settings.setting.update')->where('id', '[0-9]+');
+    Route::delete('/setting/{setting}', 'SettingsController@destroy')
+        ->name('settings.setting.destroy')->where('id', '[0-9]+');
+});
+
+
+
+Route::group([
+    'prefix' => 'import_shema_from_xmls',
+], function () {
+    Route::get('/', 'ImportShemaFromXMLsController@index')
+        ->name('import_shema_from_xmls.import_shema_from_xml.index');
+    Route::get('/create', 'ImportShemaFromXMLsController@create')
+        ->name('import_shema_from_xmls.import_shema_from_xml.create');
+    Route::post('/', 'ImportShemaFromXMLsController@store')
+        ->name('import_shema_from_xmls.import_shema_from_xml.store');
 });
