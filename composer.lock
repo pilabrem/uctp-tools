@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "356e25e5fe91003f31ca154e8d356560",
+    "content-hash": "c58aca5dd5e9fee9bdad05f931562fc5",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1212,50 +1212,6 @@
                 "type"
             ],
             "time": "2020-06-07T10:40:07+00:00"
-        },
-        {
-            "name": "pilabrem/laravel-permission-ui",
-            "version": "0.0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pilabrem/laravel-permission-ui.git",
-                "reference": "2e7699ce49700a48d0a30ddd757237c087aa78a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pilabrem/laravel-permission-ui/zipball/2e7699ce49700a48d0a30ddd757237c087aa78a1",
-                "reference": "2e7699ce49700a48d0a30ddd757237c087aa78a1",
-                "shasum": ""
-            },
-            "require": {
-                "laravelcollective/html": "^5.8",
-                "spatie/laravel-permission": "^2.37"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Pilabrem\\LaravelPermissionUI\\LaravelPermissionUiServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pilabrem\\LaravelPermissionUI\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "pilabrem",
-                    "email": "pilabrem@gmail.com"
-                }
-            ],
-            "description": "Laravel permission management UI for spatie/laravel-permission",
-            "time": "2019-08-04T11:50:16+00:00"
         },
         {
             "name": "psr/container",
@@ -3219,22 +3175,22 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v3.6.6",
+            "version": "v3.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "4669484ccbc38fe7c4e0c50456778f2010566aad"
+                "reference": "2065beda6cbe75e2603686907b2e45f6f3a5ad82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/4669484ccbc38fe7c4e0c50456778f2010566aad",
-                "reference": "4669484ccbc38fe7c4e0c50456778f2010566aad",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2065beda6cbe75e2603686907b2e45f6f3a5ad82",
+                "reference": "2065beda6cbe75e2603686907b2e45f6f3a5ad82",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.4 || ^7.0 || ^8.0",
                 "phpoption/phpoption": "^1.5.2",
-                "symfony/polyfill-ctype": "^1.16"
+                "symfony/polyfill-ctype": "^1.17"
             },
             "require-dev": {
                 "ext-filter": "*",
@@ -3278,7 +3234,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-06-02T14:08:54+00:00"
+            "time": "2020-07-14T19:04:52+00:00"
         }
     ],
     "packages-dev": [
