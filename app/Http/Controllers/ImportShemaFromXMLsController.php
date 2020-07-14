@@ -96,7 +96,6 @@ class ImportShemaFromXMLsController extends Controller
                 }
             }
 
-
             return redirect()->route('import_shema_from_xmls.import_shema_from_xml.index')
                 ->with('success_message', 'Shema importé avec succès');
         } catch (Exception $exception) {
