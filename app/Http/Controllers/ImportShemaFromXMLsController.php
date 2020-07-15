@@ -17,7 +17,7 @@ class ImportShemaFromXMLsController extends Controller
     public function __construct()
     {
         if (env('APP_ENV') !== 'local') {
-            dd("Only available in local Mode");
+            return abort(403, "Non autorisée en mode production");
         }
     }
 

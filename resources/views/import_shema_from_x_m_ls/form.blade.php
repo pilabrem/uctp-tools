@@ -1,6 +1,6 @@
 
 <div class="form-group {{ $errors->has('fichier') ? 'has-error' : '' }}">
-    <label for="fichier" class="col-md-2 control-label">Fichier</label>
+    <label for="fichier" class="col-md-2 control-label">XML File</label>
     <div class="col-md-10">
         <div class="input-group uploaded-file-group">
             <label class="input-group-btn">

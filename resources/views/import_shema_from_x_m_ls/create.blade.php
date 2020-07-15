@@ -3,12 +3,12 @@
 
 @section('content-header')
 <h1>
-    Import Shema From X M L
+    Import Shema From XML
     <small>app.diagrams.net </small>
 </h1>
 <ol class="breadcrumb">
     <li><a href="{{ route('dashboard') }}"><i class="fa fa-truck"></i> Tableau de bord</a></li>
-    <li class=""><a href="{{ route('import_shema_from_xmls.import_shema_from_xml.index') }}">Import Shema From X M Ls</a>
+    <li class=""><a href="{{ route('import_shema_from_xmls.import_shema_from_xml.index') }}">Import Shema From XML</a>
     </li>
 </ol>
 @endsection
@@ -18,7 +18,7 @@
 
 @component('components.box-form-create')
     @slot('headerLeft')
-        {{ !empty($title) ? $title : 'Import Shema From X M L' }}
+        {{ !empty($title) ? $title : 'Import Shema From XML' }}
     @endslot
 
     @slot('actions')
