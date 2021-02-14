@@ -24,7 +24,7 @@
 
 </head>
 
-<body class="hold-transition {{ config('custom.theme') }} sidebar-mini fixed">
+<body class="hold-transition {{ config('custom.theme', 'skin-red') }} sidebar-mini fixed">
     <div class="wrapper">
 
         <header class="main-header">
