@@ -1,28 +1,27 @@
 <div class="row">
 
     <div class="col-xs-12">
-        <div class="box box-{{env('THEME_ALERT')}}  my-box">
+        <div class="box box-{{ config('custom.theme_alert') }}  my-box">
             <div class="box-header with-border">
 
                 <span class="pull-left">
-                    {{$left}}
+                    {{ $left }}
                 </span>
 
                 <div class="pull-right">
 
-                    {{$right}}
+                    {{ $right }}
 
                 </div>
             </div>
 
             <div class="box-body">
-                {{$slot}}
+                {{ $slot }}
             </div>
 
             <div class="box-footer text-center">
-                {{$slotFooter}}
+                {{ $slotFooter }}
             </div>
         </div>
     </div>
 </div>
-

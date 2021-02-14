@@ -1,4 +1,4 @@
-@switch(@env('THEME_ALERT'))
+@switch(@config('custom.theme_alert'))
 
     @case('danger')
     #dd4b39
