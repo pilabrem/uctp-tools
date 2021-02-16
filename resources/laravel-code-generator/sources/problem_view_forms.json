@@ -1,0 +1,385 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "labels": {
+                "en": "Id",
+                "fr": "Id"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": false,
+            "is-on-form": false,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": true,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": true,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Entrer id ici...",
+                "fr": "Entrer id ici..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The id of the model.",
+                "fr": "The id of the model."
+            }
+        },
+        {
+            "name": "problem_instance",
+            "labels": {
+                "en": "Instance du Probl\u00e8me en XML",
+                "fr": "Instance du Probl\u00e8me en XML"
+            },
+            "html-type": "file",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|file",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": "XML File",
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "problem_instance",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The problem instance of the model.",
+                "fr": "The problem instance of the model."
+            }
+        },
+        {
+            "name": "begin_hour",
+            "labels": {
+                "en": "Heure de d\u00e9but",
+                "fr": "Heure de d\u00e9but"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {
+                "en": {
+                    "0": "0h",
+                    "1": "1h",
+                    "2": "2h",
+                    "3": "3h",
+                    "4": "4h",
+                    "5": "5h",
+                    "6": "6h",
+                    "7": "7h",
+                    "8": "8h",
+                    "9": "9h",
+                    "10": "10h",
+                    "11": "11h",
+                    "12": "12h",
+                    "13": "13h",
+                    "14": "14h",
+                    "15": "15h",
+                    "16": "16h",
+                    "17": "17h",
+                    "18": "18h",
+                    "19": "19h",
+                    "20": "20h",
+                    "21": "21h",
+                    "22": "22h",
+                    "23": "23h"
+                },
+                "fr": {
+                    "0": "0h",
+                    "1": "1h",
+                    "2": "2h",
+                    "3": "3h",
+                    "4": "4h",
+                    "5": "5h",
+                    "6": "6h",
+                    "7": "7h",
+                    "8": "8h",
+                    "9": "9h",
+                    "10": "10h",
+                    "11": "11h",
+                    "12": "12h",
+                    "13": "13h",
+                    "14": "14h",
+                    "15": "15h",
+                    "16": "16h",
+                    "17": "17h",
+                    "18": "18h",
+                    "19": "19h",
+                    "20": "20h",
+                    "21": "21h",
+                    "22": "22h",
+                    "23": "23h"
+                }
+            },
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "enum",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": "La journ\u00e9e d\u00e9marre \u00e0 quelle heure",
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "begin_hour",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The begin hour of the model.",
+                "fr": "The begin hour of the model."
+            }
+        },
+        {
+            "name": "days",
+            "labels": {
+                "en": "Jours de la semaine",
+                "fr": "Jours de la semaine"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": "Par ordre croissant",
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "days",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The days of the model.",
+                "fr": "The days of the model."
+            }
+        }
+    ],
+    "relations": [],
+    "indexes": [],
+    "auto-manage-created-and-updated-at": true,
+    "table-name": null,
+    "protection": {
+        "is-model-protected": false,
+        "is-controller-protected": false,
+        "is-api-resource-protected": false,
+        "is-api-resource-collection-protected": false,
+        "is-api-documentation-protected": false,
+        "is-api-documentation-controller-protected": false,
+        "is-form-request-protected": false,
+        "is-languages-protected": false,
+        "is-form-view-protected": false,
+        "is-index-view-protected": false,
+        "is-create-view-protected": false,
+        "is-edit-view-protected": false,
+        "is-show-view-protected": false
+    },
+    "api-documentation": {
+        "access_token_with_bearer": {
+            "en": "The access token prefixed with the \"Bearer \" key word.",
+            "fr": "The access token prefixed with the \"Bearer \" key word."
+        },
+        "index_route_description": {
+            "en": "Retrieve existing problem view forms.",
+            "fr": "Retrieve existing problem view forms."
+        },
+        "index_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "fr": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_key_is_the_model_property_and_the_value_is_the_model_value": {
+            "en": "The array's key is the problem view form property name where the value is the assigned value to the retrieved problem view form.",
+            "fr": "The array's key is the problem view form property name where the value is the assigned value to the retrieved problem view form."
+        },
+        "link_to_retrieve_first_page": {
+            "en": "Link to retrieve first page.",
+            "fr": "Link to retrieve first page."
+        },
+        "link_to_retrieve_last_page": {
+            "en": "Link to retrieve last page.",
+            "fr": "Link to retrieve last page."
+        },
+        "link_to_retrieve_previous_page": {
+            "en": "Link to retrieve previous page.",
+            "fr": "Link to retrieve previous page."
+        },
+        "link_to_retrieve_next_page": {
+            "en": "Link to retrieve next page.",
+            "fr": "Link to retrieve next page."
+        },
+        "the_number_of_current_page": {
+            "en": "The number of current page.",
+            "fr": "The number of current page."
+        },
+        "the_index_of_the_first_retrieved_item": {
+            "en": "The index of first retrieved problem view form.",
+            "fr": "The index of first retrieved problem view form."
+        },
+        "the_number_of_the_last_page": {
+            "en": "The number of the last page.",
+            "fr": "The number of the last page."
+        },
+        "the_base_link_to_the_resource": {
+            "en": "The base link to the api resource.",
+            "fr": "The base link to the api resource."
+        },
+        "the_number_of_models_per_page": {
+            "en": "The number of problem view forms per page.",
+            "fr": "The number of problem view forms per page."
+        },
+        "the_index_of_the_last_retrieved_item": {
+            "en": "The index of last retrieved problem view form.",
+            "fr": "The index of last retrieved problem view form."
+        },
+        "the_total_of_available_pages": {
+            "en": "The total of the available pages.",
+            "fr": "The total of the available pages."
+        },
+        "store_route_description": {
+            "en": "Create new problem view form.",
+            "fr": "Create new problem view form."
+        },
+        "store_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "fr": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "update_route_description": {
+            "en": "Update existsing problem view form.",
+            "fr": "Update existsing problem view form."
+        },
+        "update_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "fr": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "show_route_description": {
+            "en": "Retrieve existsing problem view form.",
+            "fr": "Retrieve existsing problem view form."
+        },
+        "show_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "fr": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_retrieve": {
+            "en": "The unique id of the problem view form to retrieve",
+            "fr": "The unique id of the problem view form to retrieve"
+        },
+        "destroy_route_description": {
+            "en": "Delete existsing problem view form.",
+            "fr": "Delete existsing problem view form."
+        },
+        "destroy_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "fr": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_delete": {
+            "en": "The id of the problem view form to delete.",
+            "fr": "The id of the problem view form to delete."
+        },
+        "general_description": {
+            "en": "Allows you to list, create, edit, show and delete problem view forms.",
+            "fr": "Allows you to list, create, edit, show and delete problem view forms."
+        },
+        "indicate_whether_the_request_was_successful_or_not": {
+            "en": "Indicate whether the request was successful or not.",
+            "fr": "Indicate whether the request was successful or not."
+        },
+        "the_id_of_the_model": {
+            "en": "The id of the problem view form.",
+            "fr": "The id of the problem view form."
+        },
+        "this_parameter_must_be_present_in_the_request": {
+            "en": "This parameter must be present in the request.",
+            "fr": "This parameter must be present in the request."
+        },
+        "the_request_failed_validation": {
+            "en": "The request failed validation.",
+            "fr": "The request failed validation."
+        },
+        "list_of_the_invalid_errors": {
+            "en": "List of the invalid errors.",
+            "fr": "List of the invalid errors."
+        },
+        "the_requested_model_does_not_exists": {
+            "en": "The requested problem view form does not exists.",
+            "fr": "The requested problem view form does not exists."
+        },
+        "the_user_does_not_have_permission_to_access_the_requested_resource": {
+            "en": "User does not have permission to access the requested resource.",
+            "fr": "User does not have permission to access the requested resource."
+        }
+    }
+}

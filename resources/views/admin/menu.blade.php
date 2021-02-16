@@ -1,3 +1,10 @@
+<li class="{{ Route::is('problem_view_forms.problem_view_form.*') ? 'active' : '' }}">
+    <a href="{{ route('problem_view_forms.problem_view_form.index') }}">
+        <i class="fa fa-gears"></i>
+        <span class="title">Problem instance viewer</span>
+    </a>
+</li>
+
 @can('manage users')
 
     <li class="{{ Route::is('settings.setting.*') ? 'active' : '' }}">
@@ -7,7 +14,8 @@
         </a>
     </li>
 
-    <li class="treeview {{ (Route::is('admin.users.*') || Route::is('admin.roles.*') || Route::is('admin.permissions.*')) ? 'active' : null }}">
+    <li
+        class="treeview {{ Route::is('admin.users.*') || Route::is('admin.roles.*') || Route::is('admin.permissions.*') ? 'active' : null }}">
         <a href="#">
             <i class="fa fa-users"></i>
             <span class="title">@lang('global.user-management.title')</span>
@@ -53,20 +61,20 @@
 
 
 @can('manage users')
-    @if(Route::has('generator_tables.generator_table.index'))
+    @if (Route::has('generator_tables.generator_table.index'))
         <li class="{{ Route::is('generator_tables.generator_table.*') ? 'active' : '' }}">
             <a href="{{ route('generator_tables.generator_table.index') }}" target="_blank">
                 <i class="fa fa-code"></i>
                 <span class="title">Code generator</span>
             </a>
         </li>
-        @if(env('APP_ENV') === 'local')
-        <li class="{{ Route::is('import_shema_from_xmls.import_shema_from_xml.*') ? 'active' : '' }}">
-            <a href="{{ route('import_shema_from_xmls.import_shema_from_xml.index') }}" target="_blank">
-                <i class="fa fa-code"></i>
-                <span class="title">Import Schema (diagrams.net)</span>
-            </a>
-        </li>
+        @if (env('APP_ENV') === 'local')
+            <li class="{{ Route::is('import_shema_from_xmls.import_shema_from_xml.*') ? 'active' : '' }}">
+                <a href="{{ route('import_shema_from_xmls.import_shema_from_xml.index') }}" target="_blank">
+                    <i class="fa fa-code"></i>
+                    <span class="title">Import Schema (diagrams.net)</span>
+                </a>
+            </li>
         @endif
     @endif
 @endcan

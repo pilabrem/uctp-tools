@@ -78,3 +78,22 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
     Route::patch('change_password', 'Auth\ChangePasswordController@changePassword')->name('auth.change_password.patch');
 });
+
+Route::group([
+    'prefix' => 'problem_view_forms',
+], function () {
+    Route::get('/', 'ProblemViewFormsController@index')
+         ->name('problem_view_forms.problem_view_form.index');
+    Route::get('/create','ProblemViewFormsController@create')
+         ->name('problem_view_forms.problem_view_form.create');
+    Route::get('/show/{problemViewForm}','ProblemViewFormsController@show')
+         ->name('problem_view_forms.problem_view_form.show')->where('id', '[0-9]+');
+    Route::get('/{problemViewForm}/edit','ProblemViewFormsController@edit')
+         ->name('problem_view_forms.problem_view_form.edit')->where('id', '[0-9]+');
+    Route::post('/', 'ProblemViewFormsController@store')
+         ->name('problem_view_forms.problem_view_form.store');
+    Route::put('problem_view_form/{problemViewForm}', 'ProblemViewFormsController@update')
+         ->name('problem_view_forms.problem_view_form.update')->where('id', '[0-9]+');
+    Route::delete('/problem_view_form/{problemViewForm}','ProblemViewFormsController@destroy')
+         ->name('problem_view_forms.problem_view_form.destroy')->where('id', '[0-9]+');
+});

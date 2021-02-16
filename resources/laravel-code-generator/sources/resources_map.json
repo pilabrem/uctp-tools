@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "model-name": "ProblemViewForm",
+        "resource-file": "problem_view_forms.json"
+    }
+]
