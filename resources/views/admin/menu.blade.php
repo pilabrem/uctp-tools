@@ -1,7 +1,13 @@
 <li class="{{ Route::is('problem_view_forms.problem_view_form.*') ? 'active' : '' }}">
     <a href="{{ route('problem_view_forms.problem_view_form.index') }}">
-        <i class="fa fa-gears"></i>
+        <i class="fa fa-circle" style="color: red;"></i>
         <span class="title">Problem instance viewer</span>
+    </a>
+</li>
+<li class="{{ Route::is('solution_view_forms.solution_view_form.*') ? 'active' : '' }}">
+    <a href="{{ route('solution_view_forms.solution_view_form.index') }}">
+        <i class="fa fa-circle" style="color: green;"></i>
+        <span class="title">Solution instance viewer</span>
     </a>
 </li>
 
@@ -52,12 +58,15 @@
     </li>
 @endcan
 
-<li class="{{ Route::is('auth.change_password') ? 'active' : '' }}">
-    <a href="{{ route('auth.change_password') }}">
-        <i class="fa fa-key"></i>
-        <span class="title">@lang('global.change_password.title')</span>
-    </a>
-</li>
+@auth
+    <li class="{{ Route::is('auth.change_password') ? 'active' : '' }}">
+        <a href="{{ route('auth.change_password') }}">
+            <i class="fa fa-key"></i>
+            <span class="title">@lang('global.change_password.title')</span>
+        </a>
+    </li>
+@endauth
+
 
 
 @can('manage users')

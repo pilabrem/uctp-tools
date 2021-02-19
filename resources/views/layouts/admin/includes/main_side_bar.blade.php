@@ -6,24 +6,21 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">NAVIGATION</li>
 
-            <li class="{{Route::is('dashboard')?'active':null}}">
-                <a href="{{route('dashboard')}}">
+            <li class="{{ Route::is('dashboard') ? 'active' : null }}">
+                <a href="{{ route('dashboard') }}">
                     <i class="fa fa-dashboard"></i> <span>Acceuil</span>
                 </a>
             </li>
 
-            {{--
-            @can('afficher donnees')
+            {{-- @can('afficher donnees')
             <li class="{{Route::is('d_homologations.d_homologation.*')?'active':null}}">
                 <a href="{{route('d_homologations.d_homologation.index')}}">
                     <i class="fa fa-file-text"></i> <span>Demandes d'homologation</span>
                 </a>
             </li>
-            @endcan
-            --}}
+            @endcan --}}
 
-            {{--
-            <li class="">
+            {{-- <li class="">
                 <a href="">
                     <i class="fa fa-road"></i> <span>Trajets</span>
                 </a>
@@ -43,8 +40,7 @@
                     <li class=""><a href=""><i class="fa fa-circle"></i> Encours</a></li>
                     <li class=""><a href=""><i class="fa fa-check-circle"></i> Terminés</a></li>
                 </ul>
-            </li>
-            --}}
+            </li> --}}
 
             @include('admin.menu')
 

@@ -17,6 +17,7 @@ Route::group(['middleware' => ['web']], function () {
     */
 
     Route::get('/', "WelcomeController@index");
+    Route::get('/test', "WelcomeController@test");
 
     Auth::routes();
 
@@ -28,7 +29,7 @@ Route::group(['middleware' => ['web']], function () {
      *
      */
 
-    Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'permission.check']], function () {
+    Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::get('/', "DashboardController@index")->name('dashboard');
     });
 
@@ -83,17 +84,36 @@ Route::group([
     'prefix' => 'problem_view_forms',
 ], function () {
     Route::get('/', 'ProblemViewFormsController@index')
-         ->name('problem_view_forms.problem_view_form.index');
-    Route::get('/create','ProblemViewFormsController@create')
-         ->name('problem_view_forms.problem_view_form.create');
-    Route::get('/show/{problemViewForm}','ProblemViewFormsController@show')
-         ->name('problem_view_forms.problem_view_form.show')->where('id', '[0-9]+');
-    Route::get('/{problemViewForm}/edit','ProblemViewFormsController@edit')
-         ->name('problem_view_forms.problem_view_form.edit')->where('id', '[0-9]+');
+        ->name('problem_view_forms.problem_view_form.index');
+    Route::get('/create', 'ProblemViewFormsController@create')
+        ->name('problem_view_forms.problem_view_form.create');
+    Route::get('/show/{problemViewForm}', 'ProblemViewFormsController@show')
+        ->name('problem_view_forms.problem_view_form.show')->where('id', '[0-9]+');
+    Route::get('/{problemViewForm}/edit', 'ProblemViewFormsController@edit')
+        ->name('problem_view_forms.problem_view_form.edit')->where('id', '[0-9]+');
     Route::post('/', 'ProblemViewFormsController@store')
-         ->name('problem_view_forms.problem_view_form.store');
+        ->name('problem_view_forms.problem_view_form.store');
     Route::put('problem_view_form/{problemViewForm}', 'ProblemViewFormsController@update')
-         ->name('problem_view_forms.problem_view_form.update')->where('id', '[0-9]+');
-    Route::delete('/problem_view_form/{problemViewForm}','ProblemViewFormsController@destroy')
-         ->name('problem_view_forms.problem_view_form.destroy')->where('id', '[0-9]+');
+        ->name('problem_view_forms.problem_view_form.update')->where('id', '[0-9]+');
+    Route::delete('/problem_view_form/{problemViewForm}', 'ProblemViewFormsController@destroy')
+        ->name('problem_view_forms.problem_view_form.destroy')->where('id', '[0-9]+');
+});
+
+Route::group([
+    'prefix' => 'solution_view_forms',
+], function () {
+    Route::get('/', 'SolutionViewFormsController@index')
+        ->name('solution_view_forms.solution_view_form.index');
+    Route::get('/create', 'SolutionViewFormsController@create')
+        ->name('solution_view_forms.solution_view_form.create');
+    Route::get('/show/{solutionViewForm}', 'SolutionViewFormsController@show')
+        ->name('solution_view_forms.solution_view_form.show')->where('id', '[0-9]+');
+    Route::get('/{solutionViewForm}/edit', 'SolutionViewFormsController@edit')
+        ->name('solution_view_forms.solution_view_form.edit')->where('id', '[0-9]+');
+    Route::post('/', 'SolutionViewFormsController@store')
+        ->name('solution_view_forms.solution_view_form.store');
+    Route::put('solution_view_form/{solutionViewForm}', 'SolutionViewFormsController@update')
+        ->name('solution_view_forms.solution_view_form.update')->where('id', '[0-9]+');
+    Route::delete('/solution_view_form/{solutionViewForm}', 'SolutionViewFormsController@destroy')
+        ->name('solution_view_forms.solution_view_form.destroy')->where('id', '[0-9]+');
 });

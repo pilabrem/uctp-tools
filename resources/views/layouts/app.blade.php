@@ -40,9 +40,7 @@
             @include('layouts.admin.includes.header')
         </header>
         <!-- Left side column. contains the logo and sidebar -->
-        @auth
-            @include('layouts.admin.includes.main_side_bar')
-        @endauth
+        @include('layouts.admin.includes.main_side_bar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">

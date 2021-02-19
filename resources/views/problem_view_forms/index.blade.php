@@ -49,7 +49,8 @@
                         <tbody>
                             @foreach ($problemViewForms as $problemViewForm)
                                 <tr>
-                                    <td>{{ $problemViewForm->problem_instance }}</td>
+                                    <td><a href="{{ asset('storage\\' . $problemViewForm->problem_instance) }}"
+                                            target="__blank"> <i class="fa fa-link"></i> Lien</a></td>
                                     <td>{{ $problemViewForm->begin_hour }}</td>
                                     <td>{{ $problemViewForm->days }}</td>
 

@@ -2,5 +2,9 @@
     {
         "model-name": "ProblemViewForm",
         "resource-file": "problem_view_forms.json"
+    },
+    {
+        "model-name": "SolutionViewForm",
+        "resource-file": "solution_view_forms.json"
     }
 ]
