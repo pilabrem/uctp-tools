@@ -6,5 +6,61 @@
     {
         "model-name": "SolutionViewForm",
         "resource-file": "solution_view_forms.json"
+    },
+    {
+        "model-name": "Room",
+        "resource-file": "rooms.json"
+    },
+    {
+        "model-name": "Travel",
+        "resource-file": "travel.json"
+    },
+    {
+        "model-name": "Problem",
+        "resource-file": "problems.json"
+    },
+    {
+        "model-name": "RoomUnavailable",
+        "resource-file": "room_unavailables.json"
+    },
+    {
+        "model-name": "Course",
+        "resource-file": "courses.json"
+    },
+    {
+        "model-name": "Config",
+        "resource-file": "configs.json"
+    },
+    {
+        "model-name": "Subpart",
+        "resource-file": "subparts.json"
+    },
+    {
+        "model-name": "Classe",
+        "resource-file": "classes.json"
+    },
+    {
+        "model-name": "ClassPossibleRoom",
+        "resource-file": "class_possible_rooms.json"
+    },
+    {
+        "model-name": "ClassPossibleTime",
+        "resource-file": "class_possible_times.json"
+    },
+    {
+        "model-name": "Distribution",
+        "resource-file": "distributions.json"
+    },
+    {
+        "model-name": "DistributionClass",
+        "resource-file": "distribution_classes.json"
+    },
+    {
+        "model-name": "Student",
+        "resource-file": "students.json"
+    },
+    {
+        "model-name": "StudentCourse",
+        "resource-file": "student_courses.json"
     }
 ]

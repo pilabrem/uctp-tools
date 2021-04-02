@@ -12,15 +12,14 @@ class CreateProblemViewFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('problem_view_forms', function(Blueprint $table)
-        {
+        Schema::create('problem_view_forms', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->softDeletes();
             $table->string('problem_instance');
-            $table->enum('begin_hour', ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23']);
+            $table->enum('begin_hour', ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']);
             $table->string('days');
-
+            $table->integer('minutes_per_slot');
         });
     }
 

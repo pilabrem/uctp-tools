@@ -11,6 +11,13 @@
     </a>
 </li>
 
+<li class="{{ Route::is('problems.problem.*') ? 'active' : '' }}">
+    <a href="{{ route('problems.problem.index') }}">
+        <i class="fa fa-circle" style="color: blue;"></i>
+        <span class="title">Problem instance creator</span>
+    </a>
+</li>
+
 @can('manage users')
 
     <li class="{{ Route::is('settings.setting.*') ? 'active' : '' }}">

@@ -20,6 +20,10 @@
             border-color: @include('layouts.admin.includes.primary-color');
         }
 
+        .info_link {
+            color: black;
+        }
+
     </style>
 
 </head>

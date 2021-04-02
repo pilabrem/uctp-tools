@@ -30,6 +30,7 @@ return [
     'begin_hour_22' => '22h',
     'begin_hour_23' => '23h',
     'days' => 'Jours de la semaine',
+    'minutes_per_slot' => 'Minutes par créneau horaire',
     'access_token_with_bearer' => 'The access token prefixed with the "Bearer " key word.',
     'index_route_description' => 'Retrieve existing problem view forms.',
     'index_route_response_description' => 'The API\'s response will be JSON based data. The JSON object will be structured as follow',

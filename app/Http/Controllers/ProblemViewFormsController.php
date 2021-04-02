@@ -69,16 +69,45 @@ class ProblemViewFormsController extends Controller
     {
         $problemViewForm = ProblemViewForm::findOrFail($id);
         $problemInstanceFile = public_path("storage\\" . $problemViewForm->problem_instance);
-        $xml = new SimpleXMLElement($problemInstanceFile, null, true);
-
-
-        // dd(count($xml), $xml->attributes(), $xml);
-        // dd($xml);
-
-
-        $problemInstance = $xml;
+        $problemInstance = new SimpleXMLElement($problemInstanceFile, null, true);
 
         return view('problem_view_forms.show', compact('problemViewForm', 'problemInstance'));
+    }
+
+    public function rooms($id)
+    {
+        $problemViewForm = ProblemViewForm::findOrFail($id);
+        $problemInstanceFile = public_path("storage\\" . $problemViewForm->problem_instance);
+        $problemInstance = new SimpleXMLElement($problemInstanceFile, null, true);
+
+        return view('problem_view_forms.sub.rooms', compact('problemViewForm', 'problemInstance'));
+    }
+
+    public function courses($id)
+    {
+        $problemViewForm = ProblemViewForm::findOrFail($id);
+        $problemInstanceFile = public_path("storage\\" . $problemViewForm->problem_instance);
+        $problemInstance = new SimpleXMLElement($problemInstanceFile, null, true);
+
+        return view('problem_view_forms.sub.courses', compact('problemViewForm', 'problemInstance'));
+    }
+
+    public function distributions($id)
+    {
+        $problemViewForm = ProblemViewForm::findOrFail($id);
+        $problemInstanceFile = public_path("storage\\" . $problemViewForm->problem_instance);
+        $problemInstance = new SimpleXMLElement($problemInstanceFile, null, true);
+
+        return view('problem_view_forms.sub.distributions', compact('problemViewForm', 'problemInstance'));
+    }
+
+    public function students($id)
+    {
+        $problemViewForm = ProblemViewForm::findOrFail($id);
+        $problemInstanceFile = public_path("storage\\" . $problemViewForm->problem_instance);
+        $problemInstance = new SimpleXMLElement($problemInstanceFile, null, true);
+
+        return view('problem_view_forms.sub.students', compact('problemViewForm', 'problemInstance'));
     }
 
     /**
@@ -91,7 +120,6 @@ class ProblemViewFormsController extends Controller
     public function edit($id)
     {
         $problemViewForm = ProblemViewForm::findOrFail($id);
-
 
         return view('problem_view_forms.edit', compact('problemViewForm'));
     }

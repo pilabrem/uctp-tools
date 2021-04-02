@@ -28,8 +28,8 @@
                     @csrf
 
                     <div class="form-group">
-                        <label for="student" class="control-label">Etudiant</label>
-                        <select name="student" id="student" class="form-control">
+                        <label for="student" class="control-label" style="padding-right: 15px;">Etudiant</label>
+                        <select name="student" id="student" class="form-control" style="margin-right: 15px; width: 100px;">
                             @foreach ($students as $_st)
                                 <option value="{{ $_st }}" {{ old('student') == $_st ? 'selected' : '' }}>
                                     {{ $_st }}</option>
@@ -37,7 +37,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-default">Display Program</button>
+                    <button type="submit" class="btn btn-default">Afficher le Programme</button>
                 </form>
             </h4>
         @endslot

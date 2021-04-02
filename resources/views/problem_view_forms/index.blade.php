@@ -49,20 +49,20 @@
                         <tbody>
                             @foreach ($problemViewForms as $problemViewForm)
                                 <tr>
-                                    <td><a href="{{ asset('storage\\' . $problemViewForm->problem_instance) }}"
-                                            target="__blank"> <i class="fa fa-link"></i> Lien</a></td>
-                                    <td>{{ $problemViewForm->begin_hour }}</td>
-                                    <td>{{ $problemViewForm->days }}</td>
-
-
                                     <td>
-
+                                        <a href="{{ asset('storage\\' . $problemViewForm->problem_instance) }}"
+                                            target="__blank">
+                                            <i class="fa fa-link"></i> Lien
+                                        </a>
+                                    </td>
+                                    <td>{{ $problemViewForm->begin_hour }}h</td>
+                                    <td>{{ $problemViewForm->days }}</td>
+                                    <td>
                                         <form method="POST"
                                             action="{!!  route('problem_view_forms.problem_view_form.destroy', $problemViewForm->id) !!}"
                                             accept-charset="UTF-8">
                                             <input name="_method" value="DELETE" type="hidden">
                                             {{ csrf_field() }}
-
                                             <div class="btn-group btn-group-xs pull-right" role="group">
                                                 <a href="{{ route('problem_view_forms.problem_view_form.show', $problemViewForm->id) }}"
                                                     class="btn btn-info" title="{{ trans('problem_view_forms.show') }}">
@@ -72,16 +72,13 @@
                                                     class="btn btn-primary" title="{{ trans('problem_view_forms.edit') }}">
                                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                                 </a>
-
                                                 <button type="submit" class="btn btn-danger"
                                                     title="{{ trans('problem_view_forms.delete') }}"
                                                     onclick="return confirm(&quot;{{ trans('problem_view_forms.confirm_delete') }}&quot;)">
                                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                                 </button>
                                             </div>
-
                                         </form>
-
                                     </td>
                                 </tr>
                             @endforeach

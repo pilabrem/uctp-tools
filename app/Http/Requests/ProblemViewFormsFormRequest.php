@@ -29,6 +29,7 @@ class ProblemViewFormsFormRequest extends FormRequest
             'problem_instance' => ['file'],
             'begin_hour' => 'required',
             'days' => 'required|string|min:1',
+            'minutes_per_slot' => 'required|numeric|min:1',
         ];
         if ($this->route()->getAction()['as'] == 'problem_view_forms.problemviewform.store' || $this->has('custom_delete_problem_instance')) {
             array_push($rules['problem_instance'], 'required');
@@ -44,7 +45,7 @@ class ProblemViewFormsFormRequest extends FormRequest
      */
     public function getData()
     {
-        $data = $this->only(['begin_hour', 'days']);
+        $data = $this->only(['begin_hour', 'days', 'minutes_per_slot']);
         if ($this->has('custom_delete_problem_instance')) {
             $data['problem_instance'] = '';
         }

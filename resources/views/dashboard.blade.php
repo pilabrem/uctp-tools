@@ -6,14 +6,15 @@
             <!-- small box -->
             <div class="small-box bg-yellow">
                 <div class="inner">
-                    <h3>25</h3>
+                    <h3></h3>
 
-                    <p>Nouvelles demandes</p>
+                    <p>Problem instances</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-email-unread"></i>
                 </div>
-                <a href="#" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="{{ route('problem_view_forms.problem_view_form.index') }}" class="small-box-footer">Plus d'info
+                    <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -21,14 +22,15 @@
             <!-- small box -->
             <div class="small-box bg-gray">
                 <div class="inner">
-                    <h3>3000</h3>
+                    <h3></h3>
 
-                    <p>Encours de vérification</p>
+                    <p>Solution instances</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-ios-email-outline"></i>
                 </div>
-                <a href="#" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="{{ route('solution_view_forms.solution_view_form.index') }}" class="small-box-footer">Plus d'info
+                    <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -36,14 +38,15 @@
             <!-- small box -->
             <div class="small-box bg-aqua">
                 <div class="inner">
-                    <h3>1558</h3>
+                    <h3></h3>
 
-                    <p>Encours d'analyse</p>
+                    <p>Problems created</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-android-sync"></i>
+                    <i class="ion ion-android-add"></i>
                 </div>
-                <a href="" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="{{ route('problems.problem.index') }}" class="small-box-footer">Plus d'info <i
+                        class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -51,12 +54,13 @@
             <!-- small box -->
             <div class="small-box bg-blue">
                 <div class="inner">
-                    <h3>2888</h3>
+                    <h3></h3>
 
-                    <p>Encours de validation</p>
+                    <p>Problems generated</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
+                    {{-- <i class="ion ion-pie-graph"></i> --}}
+                    <i class="ion ion-android-sync"></i>
                 </div>
                 <a href="#" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
